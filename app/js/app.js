@@ -1,5 +1,8 @@
 var App = Vue.extend({});
 var router = new VueRouter();
+Vue.filter('checkmark', function (value) {
+  return value ? '\u2713' : '\u2718';
+});
 
 var phoneList = Vue.extend({
   template: '#phones-list',
