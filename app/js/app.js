@@ -21,10 +21,22 @@ var phoneList = Vue.extend({
 var phoneDetail = Vue.extend({
   template: '#phones-detail',
   data: function(){
-    return {     
+    return {  
+      phone: {}   
+    }
+  }, 
+  route:{
+    data: function(transition){
+      var self = this;
+      var phoneId = transition.to.params.phoneId;
+      $.getJSON('phones/' + phoneId + '.json').done(function(data){
+        transition.next({
+          phone:  data
+        })
+      });
     }
   }
-})
+});
 
 router.map({
   '*': {
