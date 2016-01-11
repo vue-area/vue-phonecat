@@ -25,7 +25,8 @@ var phoneDetail = Vue.extend({
   template: '#phones-detail',
   data: function(){
     return {  
-      phone: {}   
+      phone: {},
+      mainImageUrl: ''
     }
   }, 
   route:{
@@ -34,11 +35,17 @@ var phoneDetail = Vue.extend({
       var phoneId = transition.to.params.phoneId;
       $.getJSON('phones/' + phoneId + '.json').done(function(data){
         transition.next({
-          phone:  data
+          phone:  data,
+          mainImageUrl: data.images[0]
         })
       });
     }
-  }
+  },
+  methods: {
+    setImage: function(imageUrl) {
+      this.mainImageUrl = imageUrl;
+    }
+  }  
 });
 
 router.map({

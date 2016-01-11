@@ -43,7 +43,7 @@
 </script>
 <script id="phones-detail" type="text/x-template">
 <div v-if="!$loadingRouteData">
-  <img v-bind:src="phone.images[0]" class="phone">
+  <img v-bind:src="mainImageUrl" class="phone">
 
   <h1>{{phone.name}}</h1>
 
@@ -51,7 +51,7 @@
 
   <ul class="phone-thumbs">
     <li v-for="img in phone.images">
-      <img v-bind:src="img">
+      <img v-bind:src="img" v-on:click="setImage(img)">
     </li>
   </ul>
 
