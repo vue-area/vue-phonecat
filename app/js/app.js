@@ -1,6 +1,7 @@
 new Vue({
   el: 'body',
   data: {
+    query: '',
     phones: [{
       'name': 'Nexus S',
       'snippet': 'Fast just got faster with Nexus S.'
