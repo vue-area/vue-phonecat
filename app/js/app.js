@@ -2,6 +2,7 @@ new Vue({
   el: 'body',
   data: {
     query: '',
+    orderProp: 'age',    
     phones: [{
       'name': 'Nexus S',
       'snippet': 'Fast just got faster with Nexus S.'

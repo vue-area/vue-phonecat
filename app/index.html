@@ -18,13 +18,17 @@
         <!--Sidebar content-->
 
         Search: <input v-model="query">
-
+        Sort by:
+        <select v-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
       </div>
       <div class="col-md-10">
         <!--Body content-->
 
         <ul class="phones">
-          <li v-for="phone in phones | filterBy query">
+          <li v-for="phone in phones | filterBy query | orderBy orderProp">
             <span>{{phone.name}}</span>
             <p>{{phone.snippet}}</p>
           </li>
