@@ -1,0 +1,19 @@
+{
+  "name": "vue-phonecat",
+  "version": "1.0.0",
+  "description": "Tutorial on building an Vue application. a port of [angular-phonecat](https://github.com/angular/angular-phonecat)",
+  "scripts": {
+     "start": "http-server ./app -a 0.0.0.0 -p 8088"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangjunjun/vue-phonecat.git"
+  },
+  "keywords": ["vue","tutor","vue-roter"],
+  "author": "xngiser(ggiiss@qq.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangjunjun/vue-phonecat/issues"
+  },
+  "homepage": "https://github.com/yangjunjun/vue-phonecat#readme"
+}
