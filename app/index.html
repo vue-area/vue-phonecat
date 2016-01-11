@@ -4,14 +4,14 @@
   <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />  
   <title>Vue phonecat</title>
-  <link href="css/bootstrap.css">
-  <link href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/vue.js"></script>
   <script src="js/lib/vue-router.js"></script>
 </head>
 <body>
-  
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2">
@@ -28,8 +28,9 @@
         <!--Body content-->
 
         <ul class="phones">
-          <li v-for="phone in phones | filterBy query | orderBy orderProp">
-            <span>{{phone.name}}</span>
+          <li v-for="phone in phones | filterBy query | orderBy orderProp" class="thumbnail">
+            <a href="#/phones/{{phone.id}}" class="thumb"><img v-bind:src="phone.imageUrl"></a>
+            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
             <p>{{phone.snippet}}</p>
           </li>
         </ul>
