@@ -11,17 +11,17 @@ Tutorial on building an Vue application. a port of [angular-phonecat](https://gi
 
 ## 特色
 
-0. 不用安装大量 npm 依赖
-1. 没有使用 less, sass, coffee, es6 等，便于阅读学习代码
-2. 采用循序渐进的方法来学习，以下是步骤：
-  - `git checkout -f step-0`  - Bootstrapping
-  - `git checkout -f step-1`  - Static Template
-  - `git checkout -f step-2`  - Angular Templates
-  - `git checkout -f step-3`  - Filtering Repeaters
-  - `git checkout -f step-4`  - Two-way Data Binding
-  - `git checkout -f step-5`  - XHRs 
-  - `git checkout -f step-6`  - Templating Links & Images
-  - `git checkout -f step-7`  - Routing & Multiple Views
-  - `git checkout -f step-8`  - More Templating
-  - `git checkout -f step-9`  - Filters
-  - `git checkout -f step-10`  - Event Handlers
+- 不用安装大量 npm 依赖
+- 没有使用 less, sass, coffee, es6 等，便于阅读学习代码
+- 采用循序渐进的方法来学习，以下是步骤：
+  0. `git checkout -f step-0`  - Bootstrapping
+  1. `git checkout -f step-1`  - Static Template
+  2. `git checkout -f step-2`  - Angular Templates
+  3. `git checkout -f step-3`  - Filtering Repeaters
+  4. `git checkout -f step-4`  - Two-way Data Binding
+  5. `git checkout -f step-5`  - XHRs 
+  6. `git checkout -f step-6`  - Templating Links & Images
+  7. `git checkout -f step-7`  - Routing & Multiple Views
+  8. `git checkout -f step-8`  - More Templating
+  9. `git checkout -f step-9`  - Filters
+  10. `git checkout -f step-10`  - Event Handlers
