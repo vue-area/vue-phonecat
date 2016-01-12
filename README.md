@@ -1,6 +1,6 @@
 # vue-phonecat
 
-本项目是算是用 Vue编写的 [angular-phonecat](https://github.com/angular/angular-phonecat)的一个移植版本，
+本项目是算是用 Vue编写的 [angular-phonecat](https://github.com/angular/angular-phonecat) 的一个移植版本，
 angular-phonecat 是 angular 官方编写一步一步的教初学者完成一个完整项目的教程。
 
 本项目算是 Vue 的一个入门教程，重点是让初学者掌握有关 Vue 的知识，所以不会用到 webpack, es6, sass 等技术， 甚至你不需要有 node 环境，只要有一个支持静态文件的本地服务器即可。
@@ -10,8 +10,8 @@ angular-phonecat 是 angular 官方编写一步一步的教初学者完成一个
 ## 开始
 
 1. 下载代码到本地，命令：`git clone https://github.com/yangjunjun/vue-phonecat.git` 
-2. 如果你有 npm ，执行 `npm install -g http-server` 来下载一个轻量级的 http server 
-3. 进入到项目目录，执行 `npm start` 来启动应用，打开： http://localhost:8088/
+2. 安装`http-server`, 命令： `npm install -g http-server` （http-server 是一个轻量级的 http server) 
+3. 进入到项目目录，执行 `npm start` 来启动应用，打开：`http://localhost:8088/`
 
 如果你没有 npm, 你可以把 app 这个目录添加到你的本地服务器的运行目录来查看
 
@@ -19,7 +19,7 @@ angular-phonecat 是 angular 官方编写一步一步的教初学者完成一个
 
 本教程暂时分为10个步骤，使用 `git checkout -f step-n` 来检出每个步骤的代码，n 是步骤的编号。
 
-** 0. 环境搭建 Bootstrapping ** 
+**0. 环境搭建 Bootstrapping** 
 
 进入 vue-phonecat 目录，执行 `git checkout -f step-0`
 
