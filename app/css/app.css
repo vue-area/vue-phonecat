@@ -24,7 +24,6 @@ body {
 /** Detail View **/
 img.phone {
   float: left;
-  border: 1px solid black;
   margin-right: 3em;
   margin-bottom: 2em;
   background-color: white;
@@ -79,4 +78,92 @@ ul.specs dt {
 
 h1 {
   border-bottom: 1px solid gray;
+}
+
+.expand-transition {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.expand-enter {
+  height: 0;  
+  opacity: 0;
+}
+.expand-leave {
+  height: 0;    
+  opacity: 0;
+}
+
+
+.phone-images {
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+/** Detail View **/
+
+
+img.phone:first-child {
+  display: block;
+}
+
+.view-container {
+  position: relative;
+}
+
+.detail-enter {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;  
+  -webkit-animation: 0.5s fade-in;
+  -moz-animation: 0.5s fade-in;
+  -o-animation: 0.5s fade-in;
+  animation: 0.5s fade-in;
+  z-index: 100;
+}
+
+.detail-leave {
+  background: white;
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;  
+  -webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+  z-index: 99;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; top: 500px;}
+  to { opacity: 1; top: 0;}
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0; top: 500px;}
+  to { opacity: 1; top: 0;}
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0; top: 500px;}
+  to { opacity: 1; top: 0;}
+}
+
+@keyframes fade-out {
+  from { opacity: 1; top: 0;}
+  to { opacity: 0; top: -500px;}
+}
+@-moz-keyframes fade-out {
+  from { opacity: 1; top: 0;}
+  to { opacity: 0; top: -500px;}
+}
+@-webkit-keyframes fade-out {
+  from { opacity: 1; top: 0;}
+  to { opacity: 0; top: -500px;}
 }

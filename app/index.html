@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<router-view></router-view>
+<router-view transition="expand"></router-view>
 <script id="phones-list" type="text/x-template">
   <div class="container-fluid">
     <div class="row">
@@ -30,7 +30,7 @@
         <!--Body content-->
 
         <ul class="phones">
-          <li v-for="phone in phones | filterBy query | orderBy orderProp" class="thumbnail">
+          <li v-for="phone in phones | filterBy query | orderBy orderProp" class="thumbnail" transition="expand">
             <a href="#/phones/{{phone.id}}" class="thumb"><img v-bind:src="phone.imageUrl"></a>
             <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
             <p>{{phone.snippet}}</p>
@@ -42,9 +42,13 @@
   </div> 
 </script>
 <script id="phones-detail" type="text/x-template">
+<div>
 <div v-if="!$loadingRouteData">
-  <img v-bind:src="mainImageUrl" class="phone">
-
+  <div class="phone-images">
+    <img v-for="img in phone.images" v-bind:src="img"
+         v-bind:class="['phone', mainImageUrl == img ? 'detail-enter': 'detail-leave']"
+         >
+  </div>  
   <h1>{{phone.name}}</h1>
 
   <p>{{phone.description}}</p>
@@ -156,6 +160,7 @@
       <dd>{{phone.additionalFeatures}}</dd>
     </li>
   </ul>
+</div>
 </div>
 </script>
 <script src="js/app.js"></script>
