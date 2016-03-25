@@ -5,7 +5,7 @@ angular-phonecat 是 angular 官方编写一步一步的教初学者完成一个
 
 本项目算是 Vue 的一个入门教程，重点是让初学者掌握有关 Vue 的知识，所以不会用到 webpack, es6, sass 等技术， 甚至你不需要有 node 环境，只要有一个支持静态文件的本地服务器即可。
 
-线上Demo: https://github.com/yangjunjun/vue-phonecat
+线上Demo: http://vue-area.github.io/vue-phonecat/app/
 
 ## 开始
 
